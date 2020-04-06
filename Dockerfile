@@ -1,12 +1,5 @@
-## docker run -it --rm --entrypoint=/bin/bash oracle/instantclient:12.2.0.1
-#docker run -it --rm --entrypoint=/bin/bash fra.ocir.io/oraseemeatechse/eugenesimos/notifysql:0.0.25
-#
-# HOW TO BUILD THIS IMAGE
-# -----------------------
-# Put all downloaded files in the same directory as this Dockerfile
-# Run: 
-#      $ docker build --pull -t oracle/instantclient:12.2.0.1 .
-#
+## docker run -it --rm --entrypoint=/bin/bash ID_Docker
+
 #
 FROM oraclelinux:7-slim  as  build-stage
 
@@ -62,13 +55,11 @@ COPY --from=build-stage /usr/lib/oracle/12.2/client64/lib /usr/lib/oracle/12.2/c
 COPY  --from=build-stage /go/src/func/func /function
 COPY  test_sql.sh script.sh show_trace.sh /function/
 COPY wallet_adw/*  /function/wallet/
-## yum install -y strace && \
+
 RUN  chmod -R ugo+rwx /function &&  \
 	chown -R 1000:1000 /usr/lib/oracle/12.2/client64/lib  \
 	&& ls -la /function && \
-    sqlplus admin/WElcome1412#@adwfree_low && \
-	  /function/test_sql.sh && \
-	chmod ugo+rwx /usr/bin  && \
+    	chmod ugo+rwx /usr/bin  && \
 	cd /usr/bin && \
 	rm -rf gpg2 dgawk gawk pgawk gpgv2 gpg-agent info diff find oldfind grep curl gpg-connect-agent gpgconf  gpgparsemail gpg-error mkdir
 ENTRYPOINT ["./func"]
