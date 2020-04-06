@@ -1,0 +1,41 @@
+{
+  "eventType" : "com.oraclecloud.databaseservice.stopautonomousdatabase.end",
+  "cloudEventsVersion" : "0.1",
+  "eventTypeVersion" : "2.0",
+  "source" : "DatabaseService",
+  "eventTime" : "2020-03-19T11:46:05.826Z",
+  "contentType" : "application/json",
+  "data" : {
+    "compartmentId" : "ocid1.compartment.oc1..aaaaaaaa375sfgxnc24b3rmxjju6ttxv264t6ukiyv42txxfxs3zj2difroa",
+    "compartmentName" : "Eugene",
+    "resourceName" : "adwfree",
+    "resourceId" : "ocid1.autonomousdatabase.oc1.eu-frankfurt-1.abtheljs43upsq4qemi5ynlgwcwpsk3cgu6i2aakydu2o6bb3cefyrghajgq",
+    "availabilityDomain" : "",
+    "additionalDetails" : {
+      "cpuCoreCount" : 1,
+      "dataStorageSizeInTBs" : 1,
+      "lifecycleState" : "STOPPED",
+      "timeCreated" : "2020-03-19T08:20:36Z",
+      "timeUpdated" : "2020-03-19T11:46:05Z",
+      "dbName" : "adwfree",
+      "licenseType" : "BRING_YOUR_OWN_LICENSE",
+      "serviceConsoleUrl" : "https://adb.eu-frankfurt-1.oraclecloud.com/console/index.html?tenant_name=OCID1.TENANCY.OC1..AAAAAAAAZVORZUWPTFWQSU6XW4SLONLLVENOH3LBB3YIKELA4XNTJOIBD4KA&database_name=ESTEST10&service_type=ADW",
+      "workloadType" : "Data Warehouse",
+      "autonomousDatabaseType" : "Shared Infrastructure",
+      "autonomousDatabaseId" : "ocid1.autonomousdatabase.oc1.eu-frankfurt-1.abtheljs43upsq4qemi5ynlgwcwpsk3cgu6i2aakydu2o6bb3cefyrghajgq"
+    },
+    "freeformTags" : {
+      "Test" : "DataSafe"
+    },
+    "definedTags" : {
+      "Mandatory_Tag" : {
+        "CreatedBy" : "oracleidentitycloudservice/eugene.simos@oracle.com",
+        "CreateDate" : "2020-03-19T08:20:36.554Z"
+      }
+    }
+  },
+  "eventID" : "c3b64cc9-d1e2-4914-8d58-1d2d74fafa48",
+  "extensions" : {
+    "compartmentId" : "ocid1.compartment.oc1..aaaaaaaa375sfgxnc24b3rmxjju6ttxv264t6ukiyv42txxfxs3zj2difroa"
+  }
+}

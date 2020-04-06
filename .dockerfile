@@ -1,0 +1,4 @@
+*.json
+artifacts/*
+Docker*
+*.jar

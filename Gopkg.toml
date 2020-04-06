@@ -1,0 +1,11 @@
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/fnproject/fdk-go"
+
+
+  
+[[prune.project]]
+name = "gopkg.in/goracle.v2"
+non-go = false
+unused-packages = false  
